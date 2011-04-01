@@ -1,11 +1,18 @@
 <html>
-	<h1>hello</h1>
+	<head>
+		<title>ToDo Project</title>
+	</head>
+	<body>
+	
+	<p>Login: <input />
+	</p>
+	<p>Password: <input type="password"/>
+	</p>
 	
 	
 <%
 
 String hello = "Hello World!";
 %>
-	<input value="<%=hello%>"/>
-
+</body>
 </html>
