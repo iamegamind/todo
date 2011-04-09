@@ -9,15 +9,16 @@
 </head>
 <body>
 	<jsp:useBean id="loginJSPBean" class="todolist.LoginJSPBean" scope="session"/> 
+	<%String error = (String)session.getAttribute("errorMsg");
+	if (error == null) error="";%>
 	<font color="red">
-	<jsp:getProperty name="loginJSPBean" property="errorMsg"/> </font>
+	<%=error%> </font>
 	<form id="thisForm" method="post" action="login.jsp" >
 		<p>Login: <input id="login" type="text" name="login" /></p>
 		<p>Password: <input id="password" type="password" name="password" /></p>
 		<input id="action" type="hidden" value="login"/>
 		<input type="submit" value="login" />
 		<input type="button" value="register" onclick="thisForm.action.value='register'; thisForm.submit(); return false;"/>
-		<input type="button" value="show action" onclick="alert(thisForm.action.value); return false;"/>
 	</form>
 
 </body>

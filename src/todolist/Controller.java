@@ -42,6 +42,14 @@ public class Controller {
 		todoDAO = factory.getToDoDAO();
 	}
 	
+	public Controller() {
+		DAOFactory factory = null;
+		factory = DAOFactory.getDAOFactory(DAOFactory.XMLFACTORY);
+		factory.setParametrs("user.xml", "todo.xml", null);
+		userDAO = factory.getUserDAO();
+		todoDAO = factory.getToDoDAO();
+	}
+	
 	public User login(String login, String pswd) {
 		currentUser = userDAO.get(login);
 		if (currentUser == null) return null;
@@ -53,6 +61,10 @@ public class Controller {
 	
 	public void updateUser(User newUser) {
 		userDAO.update(newUser);
+	}
+	
+	public User getCurrentUser() {
+		return currentUser;
 	}
 	
 	public User register (User user) {
