@@ -2,7 +2,7 @@ package todolist;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
-@XmlRootElement(name="ToDo")
+//@XmlRootElement(name="ToDo")
 public class ToDo {
 	
 	private String user;
