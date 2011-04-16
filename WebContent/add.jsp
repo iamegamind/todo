@@ -9,7 +9,7 @@
 <body>
 <form action="check.jsp" method="post">
 <p>Name: <input type="text" id="name" name="name"/></p>
-<p>Date: <input type="text" id="date" name="date "value="dd/mm/yy" size="8" maxlength="8"></p>
+<p>Date: <input type="text" id="date" name="date" value="dd/mm/yy" size="8" maxlength="8"></p>
 <p>Description: <br/>
 <textarea rows="5" name="description"></textarea></p>
 <p>Priority: <br/>
